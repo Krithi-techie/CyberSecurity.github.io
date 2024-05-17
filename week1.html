@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Course</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #0af396;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #0af396;
+        }
+
+        .container {
+            margin: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-content {
+            display: none;
+        }
+
+        .course-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .course-content h2 {
+            color: #007BFF;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .course-content p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .course-content button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .course-content button:hover {
+            background-color: #0056b3;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>Cyber Security Course</h2>
+        <div>
+            <a href="#week1">Week 1</a>
+            <a href="#week2">Week 2</a>
+            <a href="#week3">Week 3</a>
+            <a href="#week4">Week 4</a>
+            <a href="#quiz">Take Quiz</a>
+        </div>
+    </div>
+
+   <div id="week1" class="course-content active">
+    <h2>Week 1: Introduction to Cyber Security</h2>
+    <div class="video-container">
+        <iframe width="560" height="315" src="cyberSecurity.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p>
+        <strong>Introduction to Cybersecurity Course:</strong><br><br>
+        <strong>Title:</strong> "Cybersecurity Essentials: Protecting Data in the Digital Age"<br><br>
+        In today's interconnected world, cybersecurity has become a critical concern for individuals, businesses, and governments alike. With the exponential growth of digital data and the increasing sophistication of cyber threats, there is a growing demand for professionals who can safeguard sensitive information and mitigate cyber risks.<br><br>
+        Our "Cybersecurity Essentials" course is designed to provide students with a comprehensive understanding of cybersecurity principles, techniques, and best practices. Whether you're new to the field or looking to enhance your existing skills, this course will equip you with the knowledge and tools needed to protect data in the digital age.<br><br>
+        Throughout the course, you will:<br><br>
+        1. Explore the fundamentals of cybersecurity, including the principles of confidentiality, integrity, and availability.<br>
+        2. Learn about common cyber threats and attack vectors, such as malware, phishing, and social engineering.<br>
+        3. Understand the importance of risk management and how to assess and mitigate cybersecurity risks.<br>
+        4. Gain hands-on experience with cybersecurity tools and technologies, including firewalls, encryption, and intrusion detection systems.<br>
+        5. Discover best practices for securing different types of digital assets, including networks, systems, and data.<br>
+        6. Explore legal and ethical considerations in cybersecurity, including privacy laws and industry regulations.<br>
+        7. Learn how to respond to cybersecurity incidents and develop effective incident response plans.<br><br>
+        By the end of the course, you will have the skills and knowledge needed to identify cybersecurity risks, protect against cyber threats, and effectively respond to security incidents. Whether you're pursuing a career in cybersecurity or simply want to enhance your digital literacy, this course will empower you to navigate the complex landscape of cybersecurity with confidence. Join us and take the first step towards becoming a cybersecurity expert!
+    </p>
+    <button onclick="showWeek2()">Next</button>
+</div>
+
+        <!-- Week 2 Content -->
+        <div id="week2" class="course-content">
+            <h2>Week 2: Network Security</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="cyber2.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p>
+        <strong>Common Cyber Attacks:</strong><br><br>
+        Cyber attacks pose significant threats to individuals, businesses, and organizations worldwide. Understanding these threats is essential for implementing effective cybersecurity measures. Some of the most common cyber attacks include:<br><br>
+        1. <strong>Malware:</strong> Malicious software designed to infiltrate systems and cause damage or steal sensitive information. Examples include viruses, worms, ransomware, and trojans.<br>
+        2. <strong>Phishing:</strong> Deceptive emails, messages, or websites designed to trick users into revealing personal information, such as passwords or financial details.<br>
+        3. <strong>Denial of Service (DoS) and Distributed Denial of Service (DDoS) attacks:</strong> Overwhelming a target system or network with a flood of traffic, rendering it inaccessible to legitimate users.<br>
+        4. <strong>Man-in-the-Middle (MitM) attacks:</strong> Intercepting and altering communication between two parties without their knowledge, allowing attackers to eavesdrop or manipulate data.<br>
+        5. <strong>SQL Injection:</strong> Exploiting vulnerabilities in web applications to execute malicious SQL queries, potentially gaining unauthorized access to databases.<br>
+        6. <strong>Zero-Day Exploits:</strong> Attacks targeting previously unknown vulnerabilities, often before patches or fixes are available, posing significant risks to systems and networks.<br><br>
+        By understanding these common cyber attacks and their methodologies, cybersecurity professionals can better defend against and mitigate the impact of cyber threats. Implementing robust security measures, staying vigilant against emerging threats, and educating users about cybersecurity best practices are essential steps in safeguarding against cyber attacks.
+    </p>
+            <button onclick="showWeek3()">Next</button>
+        </div>
+
+        <!-- Week 3 Content -->
+        <div id="week3" class="course-content">
+            <h2>Week 3: Web Security</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="cyberSecurity.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+        1. <strong>SQL Injection:</strong> Exploiting vulnerabilities in web applications to execute malicious SQL queries, potentially gaining unauthorized access to databases.<br>
+        2. <strong>Zero-Day Exploits:</strong> Attacks targeting previously unknown vulnerabilities, often before patches or fixes are available, posing significant risks to systems and networks.<br><br>
+        By understanding these common cyber attacks and their methodologies, cybersecurity professionals can better defend against and mitigate the impact of cyber threats. Implementing robust security measures, staying vigilant against emerging threats, and educating users about cybersecurity best practices are essential steps in safeguarding against cyber attacks.
+    <br>
+<br>
+           <button onclick="showWeek4()">Next</button>
+        </div>
+
+        <!-- Week 4 Content -->
+        <div id="week4" class="course-content">
+            <h2>Week 4: Cryptography</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="cyber2.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+          <p>
+        <strong>Understanding Cryptography:</strong><br><br>
+        Cryptography is the practice of secure communication in the presence of third parties. It involves techniques for encrypting and decrypting data to ensure confidentiality, integrity, and authenticity. The fundamental concepts of cryptography include:<br><br>
+        1. <strong>Encryption:</strong> The process of transforming plaintext data into ciphertext using an algorithm and a key. This ciphertext is unreadable without the corresponding decryption key.<br>
+        2. <strong>Decryption:</strong> The reverse process of encryption, where ciphertext is transformed back into plaintext using the decryption algorithm and key.<br>
+        3. <strong>Key:</strong> A secret value used in encryption and decryption processes. Keys can be symmetric (same key for encryption and decryption) or asymmetric (public-private key pairs).<br>
+        4. <strong>Types of Cryptography:</strong> Cryptographic techniques can be categorized into symmetric cryptography, where the same key is used for encryption and decryption, and asymmetric cryptography, where different keys are used for encryption and decryption.<br>
+        5. <strong>Applications:</strong> Cryptography is used in various applications, including secure communication over the internet (e.g., HTTPS), data encryption for confidentiality (e.g., AES), digital signatures for authentication, and hashing for data integrity.<br><br>
+        By understanding the basics of cryptography, individuals and organizations can protect sensitive information from unauthorized access and ensure secure communication in an increasingly digital world.
+    </p>
+      <button onclick="showWeek1()">Back to Week 1</button>
+  <button ><a href="quiziz.html">TAKE QUIZ<a></button>
+</div>
+               <div id="quiz" class="course-content">
+            <h2>Quiz</h2>
+            <!-- Quiz content goes here -->
+      
+           </div>
+        
+
+        <!-- Quiz Content -->
+   
+    </div>
+
+    <script>
+        function showWeek1() {
+            hideAll();
+            document.getElementById('week1').classList.add('active');
+        }
+
+        function showWeek2() {
+            hideAll();
+            document.getElementById('week2').classList.add('active');
+        }
+
+        function showWeek3() {
+            hideAll();
+            document.getElementById('week3').classList.add('active');
+        }
+
+        function showWeek4() {
+            hideAll();
+            document.getElementById('week4').classList.add('active');
+        }
+
+        function showQuiz() {
+            hideAll();
+            document.getElementById('quiz').classList.add('active');
+        }
+
+        function hideAll() {
+            var contents = document.querySelectorAll('.course-content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>

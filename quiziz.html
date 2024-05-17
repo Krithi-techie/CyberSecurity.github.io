@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Course Quiz</title>
+    <style>
+        /* Quiz styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        #quiz-container {
+            margin-top: 6px;
+        }
+
+        #quiz {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        #quiz h2 {
+            color: #007BFF;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-bottom: 5px;
+        }
+
+        #quiz-form input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #quiz-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #navbar {
+            background-color: #0af396;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        #navbar img {
+            height: 150px;
+            margin-right: 25px;
+        }
+
+        #navbar h1 {
+            margin: 10;
+        }
+        #quiz-results {
+            margin-top: 20px;
+        }
+
+        #score {
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        #rank {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing navbar and container elements -->
+    <div id="navbar">
+        <h1>Introduction to Cyber Security</h1>
+    </div>
+    <div class="container" id="quiz-container">
+        <div id="quiz">
+            <h2>Quiz</h2>
+            <form id="quiz-form">
+                <div class="question">
+                    <h3>Question 1: What is the main focus of Cyber Security?</h3>
+                    <input type="radio" name="q1" value="a"> A. Protecting computer systems<br>
+                    <input type="radio" name="q1" value="b"> B. Managing social media accounts<br>
+                    <input type="radio" name="q1" value="c"> C. Developing mobile applications<br>
+                </div>
+                <div class="question">
+                    <h3>Question 2: What does HTTPS stand for?</h3>
+                    <input type="radio" name="q2" value="a"> A. Hyper Text Transfer Protocol Secure<br>
+                    <input type="radio" name="q2" value="b"> B. Hyperlink Transfer Protocol Security<br>
+                    <input type="radio" name="q2" value="c"> C. Home Transfer Protocol System<br>
+                </div>
+                <div class="question">
+                    <h3>Question 3: What is a common form of social engineering attack?</h3>
+                    <input type="radio" name="q3" value="a"> A. Phishing<br>
+                    <input type="radio" name="q3" value="b"> B. DDoS<br>
+                    <input type="radio" name="q3" value="c"> C. SQL Injection<br>
+                </div>
+                <div class="question">
+                    <h3>Question 4: What is the purpose of a firewall?</h3>
+                    <input type="radio" name="q4" value="a"> A. To block unauthorized access<br>
+                    <input type="radio" name="q4" value="b"> B. To encrypt data<br>
+                    <input type="radio" name="q4" value="c"> C. To manage passwords<br>
+                </div>
+                <div class="question">
+                    <h3>Question 5: What is the role of cryptography in Cyber Security?</h3>
+                    <input type="radio" name="q5" value="a"> A. To secure network devices<br>
+                    <input type="radio" name="q5" value="b"> B. To analyze network traffic<br>
+                    <input type="radio" name="q5" value="c"> C. To secure communication<br>
+                </div>
+                <div class="question">
+                    <h3>Question 6: What is a common vulnerability of web applications?</h3>
+                    <input type="radio" name="q6" value="a"> A. Cross-site scripting (XSS)<br>
+                    <input type="radio" name="q6" value="b"> B. Email spoofing<br>
+                    <input type="radio" name="q6" value="c"> C. Directory traversal<br>
+                </div>
+                <div class="question">
+                    <h3>Question 7: What is the purpose of a VPN?</h3>
+                    <input type="radio" name="q7" value="a"> A. To secure network devices<br>
+                    <input type="radio" name="q7" value="b"> B. To provide secure remote access<br>
+                    <input type="radio" name="q7" value="c"> C. To manage passwords<br>
+                </div>
+                <div class="question">
+                    <h3>Question 8: What is the term used for gaining unauthorized access to a system?</h3>
+                    <input type="radio" name="q8" value="a"> A. Hacking<br>
+                    <input type="radio" name="q8" value="b"> B. Encryption<br>
+                    <input type="radio" name="q8" value="c"> C. Authentication<br>
+                </div>
+                <div class="question">
+                    <h3>Question 9: What is the first step in the Cyber Kill Chain framework?</h3>
+                    <input type="radio" name="q9" value="a"> A. Reconnaissance<br>
+                    <input type="radio" name="q9" value="b"> B. Exploitation<br>
+                    <input type="radio" name="q9" value="c"> C. Installation<br>
+                </div>
+                <div class="question">
+                    <h3>Question 10: What is the term used for software that is designed to block malware?</h3>
+                    <input type="radio" name="q10" value="a"> A. Antivirus<br>
+                    <input type="radio" name="q10" value="b"> B. Firewall<br>
+                    <input type="radio" name="q10" value="c"> C. Encryption<br>
+                </div>
+
+                <input type="submit" value="Submit Quiz">
+            </form>
+            <div id="quiz-results" style="display: none;">
+                <h2>Quiz Results</h2>
+                <p id="score"></p>
+                <p id="rank"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Quiz evaluation function
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let score = 0;
+            const answers = {
+                q1: 'a', // Correct answer for Question 1
+                q2: 'a', // Correct answer for Question 2
+                q3: 'a', // Correct answer for Question 3
+                q4: 'a', // Correct answer for Question 4
+                q5: 'c', // Correct answer for Question 5
+                q6: 'a', // Correct answer for Question 6
+                q7: 'b', // Correct answer for Question 7
+                q8: 'a', // Correct answer for Question 8
+                q9: 'a', // Correct answer for Question 9
+                q10: 'a' // Correct answer for Question 10
+            };
+
+            for (const question in answers) {
+                const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === answers[question]) {
+                        score += 1;
+                    }
+                }
+            }
+
+            const totalQuestions = Object.keys(answers).length;
+            const percentage = (score / totalQuestions) * 100;
+
+            document.getElementById('score').textContent = `Your score: ${score}/${totalQuestions}`;
+            document.getElementById('rank').textContent = percentage >= 80 ? 'Congratulations! You passed the quiz.' : 'Sorry! You did not pass the quiz.';
+            document.getElementById('quiz-results').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

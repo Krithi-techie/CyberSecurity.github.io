@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Course</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .navbar {
+    background-color: #f0b03b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+            }
+
+        .navbar h1 {
+            margin: 0;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #00b0b3;
+        }
+
+        .container {
+            margin: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .course-content h2 {
+            color: #00b0b3;
+            margin-top: 0;
+        }
+
+        .course-content ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .course-content ul li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .course-content ul li::before {
+            content: "▸";
+            color: #00b0b3;
+            margin-right: 5px;
+        }
+
+        .course-content ul a {
+            color: #00b0b3;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .course-content ul a:hover {
+            color: #e2a11f;
+        }
+
+        .about-section,
+        .points-progress,
+        .details {
+            margin-top: 40px;
+        }
+
+        .about-section h2,
+        .points-progress h2,
+        .details h2 {
+            color: #00b0b3;
+            border-bottom: 2px solid #00b0b3;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            color: #555;
+        }
+
+        .points-progress p,
+        .details ul {
+            color: #555;
+        }
+
+        .details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .details ul li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .details ul li span {
+            font-weight: bold;
+            color: #00b0b3;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>Cyber Security Course</h2>
+        <div>
+            <a href="#course-content">Course Content</a>
+            <a href="#about">About</a>
+            <a href="#points-progress">Points & Progress</a>
+            <a href="#details">Details</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="course-content" class="course-content">
+            <div>
+                <h2>Course Outline</h2>
+                <ul>
+                    <li>Week 1: Introduction to Cyber Security</li>
+                    <li>Week 2: Network Security</li>
+                    <li>Week 3: Web Security</li>
+                    <li>Week 4: Cryptography</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Resources</h2>
+                <ul>
+                    <li><a href="CYBER SECURITY (R18A0521).pdf" download>Week 1 Document</a></li>
+                    <li><a href="week1.html">Week 1 Video</a></li>
+                    <li><a href="#">Week 2 Document</a></li>
+                    <li><a href="#">Week 2 Video</a></li>
+                    <li><a href="#">Week 3 Document</a></li>
+                    <li><a href="#">Week 3 Video</a></li>
+                    <li><a href="#">Week 4 Document</a></li>
+                    <li><a href="#">Week 4 Video</a></li>
+                </ul>
+            </div>
+            <div class="video-container">
+                <img src="cyber.jpeg" alt="Cyber Image" width="400" height="500">
+
+            </div>
+        </div>
+
+        <div id="about" class="about-section">
+            <h2>About the Course and Instructor</h2>
+            <p>This course provides an in-depth understanding of Cyber Security. The instructor, Krithiga has one year of experience in the field and is passionate about teaching.</p>
+        </div>
+
+        <div id="points-progress" class="points-progress">
+            <h2>Points & Progress</h2>
+            <p>Total Points: <span id="totalPoints">0</span></p>
+            <p>Progress: <span id="progress">0%</span></p>
+        </div>
+
+        <div id="details" class="details">
+            <h2>Course Details</h2>
+            <ul>
+                <li><span>Duration:</span> 4 Weeks</li>
+                <li><span>Language:</span> English</li>
+                <li><span>Level:</span> Beginner to Intermediate</li>
+                <li><span>Price:</span> Free</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Sample JavaScript code to update points and progress
+        let totalPoints = 0;
+        let progress = 0;
+
+        function updatePoints(newPoints) {
+            totalPoints += newPoints;
+            document.getElementById('totalPoints').textContent = totalPoints;
+        }
+
+        function updateProgress(newProgress) {
+            progress = newProgress;
+            document.getElementById('progress').textContent = '${progress}%';
+        }
+
+        updatePoints(50);
+        updateProgress(25);
+    </script>
+</body>
+</html>
